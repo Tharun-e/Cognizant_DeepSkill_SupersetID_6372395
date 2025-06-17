@@ -1,0 +1,33 @@
+Big O Notation:
+
+Big O notation is used to describe the performance or complexity of an algorithm in terms of how it scales with the size of the input (n).
+It gives an upper bound on the running time, helping us understand the worst-case scenario of an algorithm’s efficiency.
+Some common Big O notations:
+O(1) – Constant time: The algorithm takes the same amount of time regardless of input size.
+O(n) – Linear time: The time increases proportionally with the size of the input.
+O(log n) – Logarithmic time: The time increases slowly as input size increases.
+
+Best Case, Average Case,and Worst Case:
+
+Linear Search:
+Best Case:
+    Time Complexity: O(1)
+        Explanation: The item is found at the very beginning of the list.
+Average Case:
+    Time Complexity: O(n/2) which is approximated as O(n)
+        Explanation: On average, the item might be somewhere in the middle of the list.
+Worst Case:
+    Time Complexity: O(n)
+        Explanation: The item is either at the end of the list or not present at all.
+
+Binary Search:
+Best Case:
+    Time Complexity: O(1)
+        Explanation: The item is found right in the middle of the sorted list.
+Average Case:
+    Time Complexity: O(log n)
+        Explanation: The algorithm keeps dividing the list and narrows down to the item efficiently.
+Worst Case:
+    Time Complexity: O(log n)
+        Explanation: Even if the item is not found, the list is divided until the search space becomes empty.
+
