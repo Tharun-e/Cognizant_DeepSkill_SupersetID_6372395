@@ -1,53 +1,53 @@
 package FactoryMethodPatternExample;
 public class Main{
-    interface Document{
-        void open();
+    interface Doc{
+        void opens();
     }
-    static class WordDocument implements Document{
-        public void open(){
-            System.out.println("Opening Word Document");
+    static class WordDoc implements Doc{
+        public void opens(){
+            System.out.println("Word Document");
         }
     }
-    static class PdfDocument implements Document{
-        public void open(){
-            System.out.println("Opening PDF Document");
+    static class PdfDoc implements Doc{
+        public void opens(){
+            System.out.println("PDF Document");
         }
     }
-    static class ExcelDocument implements Document{
-        public void open(){
-            System.out.println("Opening Excel Document");
+    static class ExcelDoc implements Doc{
+        public void opens(){
+            System.out.println("Excel Document");
         }
     }
-    static abstract class DocumentFactory{
-        public abstract Document createDocument();
+    static abstract class Document{
+        public abstract Doc createDocument();
     }
-    static class WordDocumentFactory extends DocumentFactory{
-        public Document createDocument(){
-            return new WordDocument();
+    static class WordDocumentFile extends Document{
+        public Doc createDocument(){
+            return new WordDoc();
         }
     }
-    static class PdfDocumentFactory extends DocumentFactory{
-        public Document createDocument(){
-            return new PdfDocument();
+    static class PdfDocumentFile extends Document{
+        public Doc createDocument(){
+            return new PdfDoc();
         }
     }
-    static class ExcelDocumentFactory extends DocumentFactory{
-        public Document createDocument(){
-            return new ExcelDocument();
+    static class ExcelDocumentFile extends Document{
+        public Doc createDocument(){
+            return new ExcelDoc();
         }
     }
     public static void main(String[] args){
-        DocumentFactory wordFactory=new WordDocumentFactory();
-        Document wordDoc=wordFactory.createDocument();
-        wordDoc.open();
+        Document wordFactory=new WordDocumentFile();
+        Doc wordDoc=wordFactory.createDocument();
+        wordDoc.opens();
 
-        DocumentFactory pdfFactory=new PdfDocumentFactory();
-        Document pdfDoc=pdfFactory.createDocument();
-        pdfDoc.open();
+        Document pdfFactory=new PdfDocumentFile();
+        Doc pdfDoc=pdfFactory.createDocument();
+        pdfDoc.opens();
 
-        DocumentFactory excelFactory=new ExcelDocumentFactory();
-        Document excelDoc=excelFactory.createDocument();
-        excelDoc.open();
+        Document excelFactory=new ExcelDocumentFile();
+        Doc excelDoc=excelFactory.createDocument();
+        excelDoc.opens();
     }
 }
 
