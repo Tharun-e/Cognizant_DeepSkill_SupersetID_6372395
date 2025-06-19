@@ -1,20 +1,20 @@
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    public static void main(String[] args){
         Logger logger1=Logger.getInstance();
         Logger logger2=Logger.getInstance();
         logger1.log("Message1");
         logger2.log("Message2");
     }
 }
-class Logger {
+class Logger{
     private static Logger instance=new Logger();
-    private Logger() {
+    private Logger(){
         System.out.println("Logger Initialization done.");
     }
-    public static Logger getInstance() {
+    public static Logger getInstance(){
         return instance;
     }
-    public void log(String msg) {
+    public void log(String msg){
         System.out.println("Log: " + msg);
     }
 }
