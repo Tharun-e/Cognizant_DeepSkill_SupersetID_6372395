@@ -13,21 +13,21 @@ public class Main{
             return id+" - "+name+"(" +category+ ")";
         }
     }
-    public static Product linearSearch(Product products[],String targetName){
+    public static Product linearSearch(Product products[],String target){
         for(int i=0;i<products.length;i++){
-            if(products[i].name.equalsIgnoreCase(targetName)){
+            if(products[i].name.equalsIgnoreCase(target)){
                 return products[i];
             }
         }
         return null;
     }
-    public static Product binarySearch(Product products[],String targetName) {
+    public static Product binarySearch(Product products[],String target) {
         int left=0;
         int right=products.length-1;
         while(left<=right){
             int mid=(left + right)/2;
             String midName=products[mid].name.toLowerCase();
-            int compareResult=targetName.toLowerCase().compareTo(midName);
+            int compareResult=target.toLowerCase().compareTo(midName);
             if(compareResult==0){
                 return products[mid];
             } 
