@@ -4,6 +4,12 @@ public class Main{
         Logger logger2=Logger.getInstance();
         logger1.log("Message1");
         logger2.log("Message2");
+        if(logger1==logger2){
+            System.out.println("Singleton");
+        } 
+        else{
+            System.out.println("Not a Singleton");
+        }
     }
 }
 class Logger{
