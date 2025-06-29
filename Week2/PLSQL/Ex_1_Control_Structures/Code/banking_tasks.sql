@@ -30,7 +30,7 @@ BEGIN
     END LOOP;
     DBMS_OUTPUT.PUT_LINE('Interest discount applied for senior customers 60+');
 END;
-
+/
 
 BEGIN
     FOR vip_rec IN (SELECT * FROM bank_customers WHERE acct_balance > 10000) LOOP
@@ -40,7 +40,7 @@ BEGIN
     END LOOP;
     DBMS_OUTPUT.PUT_LINE('VIP status assigned for high balance customers');
 END;
-
+/
 BEGIN
     FOR due_rec IN (
         SELECT l.loan_ref, c.full_name, l.due_dt
@@ -53,4 +53,4 @@ BEGIN
                              ' is due on ' || TO_CHAR(due_rec.due_dt, 'DD-Mon-YYYY'));
     END LOOP;
 END;
-
+/
