@@ -29,6 +29,7 @@ INSERT INTO customer_accounts VALUES (503, 102, 'SAVINGS', 7000);
 INSERT INTO customer_accounts VALUES (504, 102, 'CHECKING', 3000);
 
 COMMIT;
+
 CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest IS
 BEGIN
     FOR acct_rec IN (SELECT * FROM savings_accounts) LOOP
@@ -40,6 +41,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Monthly interest applied to all savings accounts');
 END;
 /
+
 CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus (
     p_dept_id IN NUMBER,
     p_bonus_pct IN NUMBER 
@@ -52,6 +54,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Bonuses applied for Department ID: ' || p_dept_id);
 END;
 /
+
 CREATE OR REPLACE PROCEDURE TransferFunds (
     p_from_acct IN NUMBER,
     p_to_acct IN NUMBER,
