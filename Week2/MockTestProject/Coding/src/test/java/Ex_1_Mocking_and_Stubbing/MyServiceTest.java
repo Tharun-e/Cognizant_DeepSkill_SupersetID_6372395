@@ -1,5 +1,4 @@
 package Ex_1_Mocking_and_Stubbing;
-
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
