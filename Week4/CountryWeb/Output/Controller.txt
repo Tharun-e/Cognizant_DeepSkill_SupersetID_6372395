@@ -1,0 +1,4 @@
+In the method getCountryIndia() of CountryController, the following happens:
+    A Spring XML Bean Factory loads the bean configuration from country.xml.
+    The bean with ID "in" (representing India) is retrieved.
+    This bean is returned directly from the method.
