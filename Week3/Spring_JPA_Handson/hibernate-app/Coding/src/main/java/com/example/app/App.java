@@ -17,7 +17,7 @@ public class App {
         Transaction tx = session.beginTransaction();
 
         // Save the employee object
-        session.save(emp);
+        //session.save(emp);
 
         // Commit transaction and close session
         tx.commit();
