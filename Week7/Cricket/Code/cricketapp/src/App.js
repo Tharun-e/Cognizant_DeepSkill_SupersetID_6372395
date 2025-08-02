@@ -3,7 +3,7 @@ import ListOfPlayers from "./components/ListOfPlayers";
 import IndianPlayers from "./components/IndianPlayers";
 
 function App() {
-  const flag = true; 
+  const flag = false; 
   return (
     <div>
       <h1> Cricket App</h1>
