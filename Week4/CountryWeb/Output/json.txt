@@ -1,0 +1,3 @@
+The return type is Country (a POJO with code and name).
+Spring Boot uses Jackson (built-in) to automatically convert this Java object into a JSON response.
+The Content-Type: application/json header confirms this.
